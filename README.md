@@ -12,7 +12,7 @@ Done and tested with VirtualBox on Ubuntu via Vagrant(2.2.10)
 
 First step is to clone the repository into your directory
 ```
-$ git clone https://github.com/kjowong/monty.git
+$ git clone git@github.com:andylopezr/monty.git
 ```
 Compile all the `.c` files in monty
 ```
@@ -47,9 +47,6 @@ $
 - [X] Implement the `rotl` opcode.
 - [X] Implement the `rotr` opcode.
 - [X] Implement the `stack` and `queue` opcodes.
-- [X] Produces output with (printf) conversion specifiers c, s, and %.
-- [X] Handles conversion specifiers d, i.
-- [X] man page added.
 
 ### Advance Tasks
 
