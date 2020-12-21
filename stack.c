@@ -22,7 +22,7 @@ void pop(stack_t **head, unsigned int line_number)
 
 	if (!*head)
 	{
-		fprintf(s, "\033[31mL%u: can't pop an empty stack\033[0m\n", line_number);
+		fprintf(s, "L%u: can't pop an empty stack\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
@@ -45,7 +45,7 @@ void swap(stack_t **head, unsigned int line_number)
 
 	if (list_len(*head) < 2)
 	{
-		fprintf(s, "\033[31mL%u: can't swap, stack too short\033[0m\n", line_number);
+		fprintf(s, "L%u: can't swap, stack too short\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
