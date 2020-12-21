@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * tokenize - toknizes the buffer from monty file
+ * token - toknizes the buffer from monty file
  * @buffer: buffer to tokenize
  */
 void token(char *buffer)
