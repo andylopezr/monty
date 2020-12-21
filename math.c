@@ -23,7 +23,7 @@ void add(stack_t **head, unsigned int line_number)
 
 	if (list_len(*head) < 2)
 	{
-		fprintf(s, "\033[31mL%u: can't add, stack too short\033[0m\n", line_number);
+		fprintf(s, "L%u: can't add, stack too short\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
@@ -45,7 +45,7 @@ void sub(stack_t **head, unsigned int line_number)
 
 	if (list_len(*head) < 2)
 	{
-		fprintf(s, "\033[31mL%u: can't sub, stack too short\033[0m\n", line_number);
+		fprintf(s, "L%u: can't sub, stack too short\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
@@ -66,13 +66,13 @@ void _div(stack_t **head, unsigned int line_number)
 
 	if (list_len(*head) < 2)
 	{
-		fprintf(s, "\033[31mL%u: can't div, stack too short\033[0m\n", line_number);
+		fprintf(s, "L%u: can't div, stack too short\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
 	if ((*head)->n == 0)
 	{
-		fprintf(s, "\033[31mL%d: division by zero\033[0m\n", line_number);
+		fprintf(s, "L%d: division by zero\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
@@ -94,13 +94,13 @@ void mul(stack_t **head, unsigned int line_number)
 
 	if (list_len(*head) < 2)
 	{
-		fprintf(s, "\033[31mL%u: can't mul, stack too short\033[0m\n", line_number);
+		fprintf(s, "L%u: can't mul, stack too short\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
 	if ((*head)->n == 0)
 	{
-		fprintf(s, "\033[31mL%d: multiplied by zero\033[0m\n", line_number);
+		fprintf(s, "L%d: multiplied by zero\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
@@ -124,13 +124,13 @@ void mod(stack_t **head, unsigned int line_number)
 
 	if (list_len(*head) < 2)
 	{
-		fprintf(s, "\033[31mL%u: can't mod, stack too short\033[0m\n", line_number);
+		fprintf(s, "L%u: can't mod, stack too short\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
 	if ((*head)->n == 0)
 	{
-		fprintf(s, "\033[31mL%d: division by zero\033[0m\n", line_number);
+		fprintf(s, "L%d: division by zero\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
