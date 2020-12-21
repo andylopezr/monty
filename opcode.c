@@ -25,7 +25,7 @@ int opfinder(stack_t **head, unsigned int ln)
 			return (values.retvalue);
 		}
 	}
-	fprintf(s, "\033[31mL%u: unknown instruction %s\033[0m\n", ln, values.opcode);
+	fprintf(s, "L%u: unknown instruction %s\n", ln, values.opcode);
 	values.retvalue = -1;
 	return (values.retvalue);
 }
