@@ -11,7 +11,7 @@ void push_mode(stack_t **head, unsigned int line_number)
 
 	if (!values.arg || !check_int(values.arg))
 	{
-		fprintf(stderr, "\033[31mL%u: usage: push integer\033[0m\n", line_number);
+		fprintf(s, "L%u: usage: push integer\n", line_number);
 		values.retvalue = -1;
 		return;
 	}
@@ -34,7 +34,7 @@ void push_head(stack_t **head, int number)
 	node = malloc(sizeof(stack_t));
 	if (!node)
 	{
-		fprintf(stderr, "\033[31mError: malloc failed\033[0m\n");
+		fprintf(s, "Error: malloc failed\n");
 		values.retvalue = -1;
 		return;
 	}
@@ -63,7 +63,7 @@ void push_tail(stack_t **head, int number)
 	node = malloc(sizeof(stack_t));
 	if (!node)
 	{
-		fprintf(stderr, "\033[31mError: malloc failed\033[0m\n");
+		fprintf(s, "Error: malloc failed\n");
 		values.retvalue = -1;
 		return;
 	}
