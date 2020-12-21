@@ -28,7 +28,7 @@ void pint(stack_t **head, unsigned int ln)
 {
 	if (!head || !*head)
 	{
-		fprintf(s, "\033[31mL%d: can't pint, stack empty\033[0m\n", ln);
+		fprintf(s, "L%d: can't pint, stack empty\n", ln);
 		values.retvalue = -1;
 		return;
 	}
@@ -46,13 +46,13 @@ void pchar(stack_t **head, unsigned int ln)
 {
 	if (!head || !*head)
 	{
-		fprintf(s, "\033[31mL%d: can't pchar, stack empty\033[0m\n", ln);
+		fprintf(s, "L%d: can't pchar, stack empty\n", ln);
 		values.retvalue = -1;
 		return;
 	}
 	if ((*head)->n < 32 || (*head)->n > 126)
 	{
-		fprintf(s, "\033[31mL%u: can't pchar, value out of range\033[0m\n", ln);
+		fprintf(s, "L%u: can't pchar, value out of range\n", ln);
 		values.retvalue = -1;
 		return;
 	}
