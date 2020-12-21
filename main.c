@@ -20,13 +20,13 @@ int main(int ac, char **av)
 	values.arg = NULL;
 	if (ac != 2)
 	{
-		fprintf(stderr, "\033[31mUSAGE: monty file\033[0m\n");
+		fprintf(s, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	monty = fopen(av[1], "r");
 	if (!monty)
 	{
-		fprintf(stderr, "\033[31mError: Can't open file %s\033[0m\n", av[1]);
+		fprintf(s, "Error: Can't open file %s\n", av[1]);
 		exit(EXIT_FAILURE);
 	}
 	while ((len = getline(&buffer, &line_len, monty)) != -1)
